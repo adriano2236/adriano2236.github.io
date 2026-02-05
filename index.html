@@ -1,11 +1,11 @@
-<!doctype html>
+ <!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio | Adriano José</title>
 
-    <!-- Fonte Premium -->
+    <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
@@ -41,6 +41,8 @@
         width: 90%;
         max-width: 1000px;
         margin: 0 auto;
+        display: grid;
+        gap: 25px;
       }
 
       section {
@@ -50,7 +52,14 @@
       h2 {
         text-align: center;
         font-size: 26px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+      }
+
+      .sobre {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        color: #555;
       }
 
       .card {
@@ -58,37 +67,27 @@
         border-radius: 18px;
         padding: 25px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        max-width: 420px;
-        margin: 0 auto;
-        text-align: left;
       }
 
       .card h3 {
-        margin-top: 0;
-        font-size: 20px;
+        margin: 0 0 10px;
       }
 
       .card p {
         color: #555;
-        font-size: 15px;
-        line-height: 1.5;
+        font-size: 14px;
       }
 
       .btn {
         display: block;
-        margin-top: 20px;
+        margin-top: 15px;
         text-align: center;
         background: #1a4731;
         color: white;
-        padding: 14px;
-        border-radius: 12px;
+        padding: 12px;
+        border-radius: 10px;
         text-decoration: none;
         font-weight: bold;
-        transition: 0.2s;
-      }
-
-      .btn:active {
-        transform: scale(0.97);
       }
 
       footer {
@@ -97,15 +96,31 @@
         font-size: 14px;
         background: #111;
         color: white;
-        margin-top: 40px;
       }
 
-      .sobre {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 16px;
-        color: #444;
+      /* Desktop */
+      @media (min-width: 768px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Botão WhatsApp */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
       }
     </style>
   </head>
@@ -119,43 +134,70 @@
 
     <!-- SOBRE -->
     <section>
-      <div class="container">
-        <h2>Sobre mim</h2>
-        <p class="sobre">
-          Sou estudante de Front-End e estou construindo projetos modernos e
-          responsivos com HTML, CSS e JavaScript. Busco minha primeira vaga na
-          área de programação.
-        </p>
-      </div>
+      <h2>Sobre mim</h2>
+      <p class="sobre">
+        Estudante de Front-End focado em HTML, CSS e JavaScript. Desenvolvendo
+        projetos modernos, responsivos e voltados para o mercado real.
+      </p>
     </section>
 
     <!-- PROJETOS -->
     <section>
-      <div class="container">
-        <h2>Projetos</h2>
+      <h2>Projetos</h2>
 
+      <div class="container">
+        <!-- Projeto 1 -->
         <div class="card">
           <h3>🏡 Caltack Urbanizadora</h3>
-          <p>
-            Site responsivo desenvolvido para uma empresa de loteamentos,
-            incluindo páginas internas, cards modernos e integração com
-            WhatsApp.
-          </p>
-
+          <p>Site responsivo para loteamentos e empreendimentos urbanos.</p>
           <a
             class="btn"
             href="https://adriano2236.github.io/caltack-urbanizadora/"
             target="_blank"
           >
-            Ver Projeto Online
+            Ver Projeto
           </a>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="card">
+          <h3>🏗️ Caltack Construção</h3>
+          <p>Site institucional moderno com layout limpo e mobile-first.</p>
+          <a
+            class="btn"
+            href="https://adriano2236.github.io/caltack-construcao/"
+            target="_blank"
+          >
+            Ver Projeto
+          </a>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="card">
+          <h3>🌐 Projeto 3</h3>
+          <p>Em desenvolvimento.</p>
+          <a class="btn" href="#" target="_blank">Ver Projeto</a>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="card">
+          <h3>💻 Projeto 4</h3>
+          <p>Em desenvolvimento.</p>
+          <a class="btn" href="#" target="_blank">Ver Projeto</a>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>© 2026 - Portfólio Adriano José | Front-End Developer</footer>
+    <footer>© 2026 - Portfólio Adriano José</footer>
+
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/5554992361064?text=Olá,%20vi%20seu%20portfólio%20e%20quero%20falar%20com%20você."
+      class="whatsapp-float"
+      target="_blank"
+    >
+      🟢
+    </a>
   </body>
 </html>
-
-
